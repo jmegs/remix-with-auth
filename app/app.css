@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+	--foreground: var(--color-stone-950);
+	--background: var(--color-white);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground: var(--color-stone-50);
+		--background: var(--color-stone-950);
+	}
+}
+
+html,
+body {
+	color: var(--foreground);
+	background-color: var(--background);
+  font-family: var(--font-family-mono);
+
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
+}
+
+.btn {
+	padding: var(--spacing-2) var(--spacing-3);
+	background-color: var(--foreground);
+	color: var(--background);
+
+	&:hover {
+		background-color: color-mix(
+			in oklab,
+			var(--foreground) 92%,
+			var(--background)
+		);
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: none;
+	}
+	&:focus-visible {
+		outline: 2px solid var(--color-yellow-500);
+    outline-offset: -2px;
+	}
+}
+
+input {
+	font: inherit;
+	padding: var(--spacing-1) var(--spacing-2);
+
+	background-color: color-mix(in oklab, var(--foreground) 5%, var(--background));
+	border-color: color-mix(in oklab, var(--foreground) 15%, var(--background));
+
+	&:focus {
+		outline: none;
+	}
+	
+  &:focus-visible {
+		border-inline-start: 4px solid var(--foreground);
+	}
+}
