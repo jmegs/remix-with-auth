@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@flydotio/dockerfile": "^0.5.9",
     "@remix-run/dev": "^2.13.1",
     "@tailwindcss/forms": "^0.5.9",
     "@types/react": "^18.2.20",
