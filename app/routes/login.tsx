@@ -16,7 +16,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 	const session = await getSession(request.headers.get("Cookie"));
 	const error = session.get(auth.sessionErrorKey) as LoaderError;
-	
+
 	return { error };
 };
 
@@ -28,20 +28,12 @@ export default function LoginPage() {
 
 			<div className="flex flex-col">
 				<label htmlFor="email">Email</label>
-				<input
-					type="email"
-					name="email"
-					id="email"
-				/>
+				<input type="email" name="email" id="email" />
 			</div>
 
 			<div className="flex flex-col">
 				<label htmlFor="password">Password</label>
-				<input
-					type="password"
-					name="password"
-					id="password"
-				/>
+				<input type="password" name="password" id="password" />
 			</div>
 
 			<button type="submit" className="btn">

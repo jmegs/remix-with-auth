@@ -1,7 +1,4 @@
-import type {
-	LoaderFunctionArgs,
-	MetaFunction,
-} from "@remix-run/node";
+import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { Form, useLoaderData } from "@remix-run/react";
 import { auth } from "~/lib/auth.server";
 
@@ -27,7 +24,9 @@ export default function Index() {
 			<h1>welcome to remix</h1>
 			<p>{email}</p>
 			<Form method="post" action="/logout">
-				<button type="submit" className="underline">Logout</button>
+				<button type="submit" className="underline">
+					Logout
+				</button>
 			</Form>
 		</div>
 	);

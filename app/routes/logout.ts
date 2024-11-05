@@ -5,4 +5,4 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 	await auth.logout(request, { redirectTo: "/login" });
 };
 
-export const loader = async () => redirect("/login")
+export const loader = async () => redirect("/login");
